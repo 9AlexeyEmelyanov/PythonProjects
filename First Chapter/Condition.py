@@ -64,12 +64,33 @@ def task30():
     else:
         print("Нет такой банкноты")
 
+# Упражнение 51. Корни квадратичной функции
+def task31():
+    # f(x) = ax^2 + bx + c
+    a = int(input("Введите a: "))
+    b = int(input("Введите b: "))
+    c = int(input("Введите c: "))
+    if a == 0:
+        return
+    D = math.pow(b, 2) - 4 * a * c
+    if D > 0:
+        print("Выражение имеет 2 корня")
+        print(f"x1 = ", -b + math.sqrt(D) / 2 * a)
+        print(f"x2 = ", -b - math.sqrt(D) / 2 * a)
+    elif D == 0:
+        print("Выражение имеет 1 корень")
+        print(f"x = ", -b + math.sqrt(D) / 2 * a)
+    else:
+        print("Нет корней")
+
+
 def main():
     #task26()
     #task27()
     #task28()
     #task29()
-    task30()
+    #task30()
+    task31()
 
 if __name__ == "__main__":
     main()
