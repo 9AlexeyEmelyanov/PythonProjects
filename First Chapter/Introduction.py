@@ -120,6 +120,33 @@ def task12():
                               + math.cos(t1) * math.cos(t2) 
                               * math.cos(g1 - g2)))
 
+def task13():
+    ##
+    # Рассчитываем минимальное количество монет для представления указанной суммы
+    ##
+    CENTS_PER_TOONIE = 200
+    CENTS_PER_LOONIE = 100
+    CENTS_PER_QUARTER = 25
+    CENTS_PER_DIME =10
+    CENTS_PER_NICKEL =5
+    # Запрашиваем у пользователя сумму в центах
+    cents = int(input("Введите сумму в центах: "))
+    # Определим количество двухдолларовых монет путем деления суммы на 200. Затем вычислим
+    # оставшуюся сумму для размена, рассчитав остаток от деления
+    print(" ", cents // CENTS_PER_TOONIE, "двухдолларовых монет")
+    cents = cents % CENTS_PER_TOONIE
+    # Повторяем эти действия для остальных монет
+    print(" ", cents // CENTS_PER_LOONIE, "однодолларовых монет")
+    cents = cents % CENTS_PER_LOONIE
+    print(" ", cents // CENTS_PER_QUARTER, "25-центовых монет")
+    cents = cents % CENTS_PER_QUARTER
+    print(" ", cents // CENTS_PER_DIME, "10-центовых монет")
+    cents = cents % CENTS_PER_DIME
+    print(" ", cents // CENTS_PER_NICKEL, "5-центовых монет")
+    cents = cents % CENTS_PER_NICKEL
+    # Отобразим остаток в центах
+    print(" ", cents, "центов")
+
 def main():
     #task1()
     #task2()
@@ -132,7 +159,8 @@ def main():
     #task9()
     #task10()
     #task11()
-    task12()
+    #task12()
+    #task13()
 
 if __name__ == "__main__":
     main()
