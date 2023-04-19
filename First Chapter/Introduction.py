@@ -212,7 +212,24 @@ def task19():
     heigth = int(input("Введите высоту в метрах: "))
     vf = math.sqrt(2 * GRAVITY * heigth)
     print(f"Объект дистигнет земли на скорости: {vf:.2f}")
-    
+
+
+# Упражнение 20. Уравнение состояния идеального газа
+def task20():
+    # Формула - PV = nRT
+    R_COST = 8.314
+    pressure = float(input("Введите давление в Па: "))
+    volume = float(input("Введите объем газа в литрах: "))
+    temperature = float(input("Введите температуру в градусах Цельсиях: "))
+
+    # Преобразовать температуру в Кильвины
+    temperature_K = temperature + 273.15
+
+    # Рассчитать количество вещества в молях
+    n = (pressure * volume) / (R_COST * temperature_K)
+
+    # Вывести результат
+    print(f"Количество газа в молях: {n:.2f}")
 
 def main():
     #task1()
@@ -233,7 +250,8 @@ def main():
     #task16()
     #task17()
     #task18()
-    task19()
+    #task19()
+    task20()
 
 if __name__ == "__main__":
     main()
