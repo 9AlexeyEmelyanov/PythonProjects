@@ -268,7 +268,14 @@ def task24():
     print(f" {hours} часов в секунды: {HOURS_PER_SEC * hours}")
     print(f" {minutes} минут в секунды: {MIN_PER_SEC * minutes}")
 
-
+# Упражнение 25. Сумма цифр в числе
+def task25():
+    number = 314
+    first_number = number // 100
+    second_number = (number // 10) % 10
+    third_number = number % 10
+    sum = first_number + second_number + third_number
+    print(sum)
 
 def main():
     #task1()
@@ -294,7 +301,8 @@ def main():
     #task21()
     #task22()
     #task23()
-    task24()
+    #task24()
+    task25()
 
 if __name__ == "__main__":
     main()
