@@ -206,6 +206,13 @@ def task18():
     volume = round(math.pi * math.pow(r_cilinder, 2.0) * h_cilinder, 1)
     print(f"Объем цилиндра: {volume:.1f}")
 
+# Упражнение 19. Свободное падение
+def task19():
+    GRAVITY = 9.8
+    heigth = int(input("Введите высоту в метрах: "))
+    vf = math.sqrt(2 * GRAVITY * heigth)
+    print(f"Объект дистигнет земли на скорости: {vf:.2f}")
+    
 
 def main():
     #task1()
@@ -225,7 +232,8 @@ def main():
     #task15()
     #task16()
     #task17()
-    task18()
+    #task18()
+    task19()
 
 if __name__ == "__main__":
     main()
