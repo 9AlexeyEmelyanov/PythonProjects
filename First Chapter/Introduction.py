@@ -110,6 +110,7 @@ def task11():
     # Выводим результат
     print("Потребление топлива в литрах на 100 км:", l_per_100km)
 
+# Упражнение 12. Расстояние между точками на Земле
 def task12():
     t1 = math.radians(float(input("Введите t1: ")))
     g1 = math.radians(float(input("Введите g1: ")))
@@ -120,6 +121,7 @@ def task12():
                               + math.cos(t1) * math.cos(t2) 
                               * math.cos(g1 - g2)))
 
+# Упражнение 13. Размен
 def task13():
     ##
     # Рассчитываем минимальное количество монет для представления указанной суммы
@@ -147,6 +149,8 @@ def task13():
     # Отобразим остаток в центах
     print(" ", cents, "центов")
 
+
+# Упражнение 14. Рост
 def task14():
     IN_PER_FT = 12
     CM_PER_IN = 2.54
@@ -156,6 +160,26 @@ def task14():
     cm = (feet * IN_PER_FT + inches) * CM_PER_IN
     print(f"Ваш рост в сантиметрах: ", cm)
 
+# Упражнение 15. Расстояние
+def task15():
+    # 1 feet = 12 inches 
+    FT_PER_IN = 12
+    # 1 feet = 0.33 yards 
+    FT_PER_YR = 0.33
+    # 1 feet = 0.00019 miles 
+    FT_PER_ML = 0.00019
+
+    print("Введите расстояние в футах:")
+    feet = float(input())
+    inches = feet * FT_PER_IN
+    yards = feet * FT_PER_YR
+    miles = feet * FT_PER_ML
+    print(f"{feet:.2f} футы - это {inches:.2f} дюймов,"
+           f"{yards:.2f} ярдов и {miles:.5f} миль")
+
+
+    
+    
 
 def main():
     #task1()
@@ -171,7 +195,8 @@ def main():
     #task11()
     #task12()
     #task13()
-    task14()
+    #task14()
+    task15()
 
 if __name__ == "__main__":
     main()
