@@ -177,9 +177,12 @@ def task15():
     print(f"{feet:.2f} футы - это {inches:.2f} дюймов,"
            f"{yards:.2f} ярдов и {miles:.5f} миль")
 
-
-    
-    
+# Упражнение 16. Площадь и объем
+def task16():
+    r = float(input("Введите радиус фигуры: "))
+    area = math.pi * math.pow(r, 2.0)
+    volume = (4 * math.pi * math.pow(r, 3.0)) / 3
+    print(f"Площадь фигуры: {area}, объем фигуры: {volume}")
 
 def main():
     #task1()
@@ -196,7 +199,8 @@ def main():
     #task12()
     #task13()
     #task14()
-    task15()
+    #task15()
+    task16()
 
 if __name__ == "__main__":
     main()
