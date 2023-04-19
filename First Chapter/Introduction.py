@@ -238,6 +238,15 @@ def task21():
     area = b * h / 2
     print(f"Площадь треугольника = {area:.2f}")
 
+# Упражнение 22. Площадь треугольника (снова)
+def task22():
+    s1 = int(input("Введите 1 длину треугольника: "))
+    s2 = int(input("Введите 2 длину треугольника: "))
+    s3 = int(input("Введите 3 длину треугольника: "))
+    s = (s1 + s2 + s3) / 2
+    area = math.sqrt(s * (s - s1) * (s - s2) * (s - s3))
+    print(f"Площадь треугольника = {area:.2f}")
+
 def main():
     #task1()
     #task2()
@@ -259,7 +268,8 @@ def main():
     #task18()
     #task19()
     #task20()
-    task21()
+    #task21()
+    task22()
 
 if __name__ == "__main__":
     main()
