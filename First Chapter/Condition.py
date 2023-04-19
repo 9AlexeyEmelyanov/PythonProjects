@@ -44,11 +44,32 @@ def task29():
         days = "28 или 29"
     print("Количество дней в месяце", month, "равно", days) 
 
+# Упражнение 30. Портреты на банкнотах
+def task30():
+    dollar = int(input("Введите банкноту: "))
+    if dollar == 1:
+        print("Это Джордж Вашингтон")
+    elif dollar == 2:
+        print("Это Томас Джефферсон")
+    elif dollar == 5:
+        print("Это Авраам Линкольн")
+    elif dollar == 10:
+        print("Это Александр Гамильтон")
+    elif dollar == 20:
+        print("Это Эндрю Джексон")
+    elif dollar == 50:
+        print("Это Улисс Грант")
+    elif dollar == 100:
+        print("Это Бенджамин Франклин")
+    else:
+        print("Нет такой банкноты")
+
 def main():
     #task26()
     #task27()
     #task28()
-    task29()
+    #task29()
+    task30()
 
 if __name__ == "__main__":
     main()
