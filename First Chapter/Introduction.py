@@ -247,6 +247,14 @@ def task22():
     area = math.sqrt(s * (s - s1) * (s - s2) * (s - s3))
     print(f"Площадь треугольника = {area:.2f}")
 
+# Упражнение 23. Площадь правильного многоугольника
+def task23():
+    s = int(input("Введите длину стороны: "))
+    n = int(input("Введите количество сторон: "))
+    area = n * math.pow(s, 2.0) / 4 * math.tan(math.pi / n)
+    print(f"Площадь треугольника = {area:.2f}")
+ 
+
 def main():
     #task1()
     #task2()
@@ -269,7 +277,8 @@ def main():
     #task19()
     #task20()
     #task21()
-    task22()
+    #task22()
+    task23()
 
 if __name__ == "__main__":
     main()
