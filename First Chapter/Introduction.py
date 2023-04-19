@@ -147,6 +147,16 @@ def task13():
     # Отобразим остаток в центах
     print(" ", cents, "центов")
 
+def task14():
+    IN_PER_FT = 12
+    CM_PER_IN = 2.54
+    print("Введите рост: ")
+    feet = int(input("Количество футов: "))
+    inches = int(input("Количество дюймов: "))
+    cm = (feet * IN_PER_FT + inches) * CM_PER_IN
+    print(f"Ваш рост в сантиметрах: ", cm)
+
+
 def main():
     #task1()
     #task2()
@@ -161,6 +171,7 @@ def main():
     #task11()
     #task12()
     #task13()
+    task14()
 
 if __name__ == "__main__":
     main()
