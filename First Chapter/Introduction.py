@@ -199,6 +199,13 @@ def task17():
     cost = kwh * ELECTRICITY_PRICE
     print(f"Стоимость энергии: {cost:.2f} центов.")
 
+# Упражнение 18. Объем цилиндра
+def task18():
+    r_cilinder = int(input("Введите радиус цилиндра: "))
+    h_cilinder = int(input("Введите высоту цилиндра: "))
+    volume = round(math.pi * math.pow(r_cilinder, 2.0) * h_cilinder, 1)
+    print(f"Объем цилиндра: {volume:.1f}")
+
 
 def main():
     #task1()
@@ -217,7 +224,8 @@ def main():
     #task14()
     #task15()
     #task16()
-    task17()
+    #task17()
+    task18()
 
 if __name__ == "__main__":
     main()
