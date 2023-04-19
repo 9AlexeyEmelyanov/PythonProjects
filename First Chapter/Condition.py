@@ -33,11 +33,22 @@ def task28():
     else:
         print("Это согласная буква")
 
+# Упражнение 29. Сколько дней в месяце?
+def task29():
+    month = input("Введите название месяца: ")
+    days = 31
+    if month == "Апрель" or month == "Июнь" or \
+        month == "Сентябрь" or month == "Ноябрь":
+        days = 30
+    elif month == "Февраль":
+        days = "28 или 29"
+    print("Количество дней в месяце", month, "равно", days) 
 
 def main():
     #task26()
     #task27()
-    task28()
+    #task28()
+    task29()
 
 if __name__ == "__main__":
     main()
