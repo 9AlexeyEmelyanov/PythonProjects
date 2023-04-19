@@ -184,6 +184,22 @@ def task16():
     volume = (4 * math.pi * math.pow(r, 3.0)) / 3
     print(f"Площадь фигуры: {area}, объем фигуры: {volume}")
 
+# Упражнение 17. Теплоемкость
+def task17():
+    # q = mCdT.
+    WATER_HEAT_CAPACITY = 4.186
+    ELECTRICITY_PRICE = 8.9
+    J_TO_KWH = 2.777e-7
+
+    volume = float(input("Объем воды в миллилитрах: "))
+    d_temp = float(input("Повышение температуры (в градусах Цельсия): "))
+    q = volume * d_temp * WATER_HEAT_CAPACITY
+    print(f"Потребуется {q} Дж энергии.")
+    kwh = q * J_TO_KWH
+    cost = kwh * ELECTRICITY_PRICE
+    print(f"Стоимость энергии: {cost:.2f} центов.")
+
+
 def main():
     #task1()
     #task2()
@@ -200,7 +216,8 @@ def main():
     #task13()
     #task14()
     #task15()
-    task16()
+    #task16()
+    task17()
 
 if __name__ == "__main__":
     main()
