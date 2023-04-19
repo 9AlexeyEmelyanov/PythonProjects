@@ -253,7 +253,22 @@ def task23():
     n = int(input("Введите количество сторон: "))
     area = n * math.pow(s, 2.0) / 4 * math.tan(math.pi / n)
     print(f"Площадь треугольника = {area:.2f}")
- 
+
+# Упражнение 24. Единицы времени
+def task24():
+    MIN_PER_SEC = 60
+    HOURS_PER_SEC = MIN_PER_SEC * 60
+    DAYS_PER_SEC = HOURS_PER_SEC * 24  
+    
+    days = int(input("Введите кол-во дней: "))
+    hours = int(input("Введите кол-во часов: "))
+    minutes = int(input("Введите кол-во минут: "))
+    seconds = int(input("Введите кол-во секунд: "))
+    print(f" {days} дней в секунды: {DAYS_PER_SEC * days}")
+    print(f" {hours} часов в секунды: {HOURS_PER_SEC * hours}")
+    print(f" {minutes} минут в секунды: {MIN_PER_SEC * minutes}")
+
+
 
 def main():
     #task1()
@@ -278,7 +293,8 @@ def main():
     #task20()
     #task21()
     #task22()
-    task23()
+    #task23()
+    task24()
 
 if __name__ == "__main__":
     main()
